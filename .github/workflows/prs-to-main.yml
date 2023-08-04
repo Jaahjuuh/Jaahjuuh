@@ -18,8 +18,6 @@ jobs:
         run: |
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git fetch --unshallow
           git checkout develop
-          git pull
-          git merge --no-ff main --no-edit
+          git merge main --no-edit
           git push origin develop
